@@ -1,0 +1,115 @@
+@article{aishwaryaanandManagingInfrastructureAmazon2017,
+  title = {Managing {{Infrastructure}} in {{Amazon}} Using {{EC2}}, {{CloudWatch}}, {{EBS}}, {{IAM}} and {{CloudFront}}},
+  author = {{Aishwarya Anand} and {GD Goenka University}},
+  date = {2017-03-25},
+  journaltitle = {International Journal of Engineering Research and},
+  shortjournal = {IJERT},
+  volume = {V6},
+  number = {03},
+  pages = {IJERTV6IS030335},
+  issn = {2278-0181},
+  doi = {10.17577/IJERTV6IS030335},
+  url = {http://www.ijert.org/view-pdf/16443/managing-infrastructure-in-amazon-using-ec2-cloudwatch-ebs-iam-and-cloudfront},
+  urldate = {2025-11-15},
+  abstract = {Amazon EC2 provides a centralized control over all the resources and an efficient computing environment. EC2 is very beneficial as it provides Auto-Scaling capability by which resources are scaled automatically when required without any friction. Amazon EC2 service level agreements commitment is 99.95\%, which makes it highly reliable. AWS CloudWatch is a service provided by Amazon that basically reduces the time to detect and recover from issues. Amazon web services are mainly targeted at organizations that have multiple users or various systems that use AWS products such as EC2, Amazon S3 and others. IAM (Identity and access management) is used to manage all the users of AWS by having a central control, providing access keys, granting user permissions that control the access to various AWS resource.},
+  langid = {english},
+  file = {C:\Users\Ethel Ogallo\Zotero\storage\JNVX35L4\Aishwarya Anand and GD Goenka University - 2017 - Managing Infrastructure in Amazon using EC2, CloudWatch, EBS, IAM and CloudFront.pdf}
+}
+
+@online{AmazonEMRArchitecture2025,
+  title = {Amazon {{EMR}} Architecture and Service Layers - {{Amazon EMR}}},
+  year = {14/11/2025, 12:01:15},
+  url = {https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-overview-arch.html#emr-arch-resource-management},
+  urldate = {2025-11-14},
+  file = {C:\Users\Ethel Ogallo\Zotero\storage\BXPV7VAZ\emr-overview-arch.html}
+}
+
+@online{ApacheHadoop3422025,
+  title = {Apache {{Hadoop}} 3.4.2 – {{Apache Hadoop YARN}}},
+  year = {15/11/2025, 23:40:43},
+  url = {https://hadoop.apache.org/docs/stable/hadoop-yarn/hadoop-yarn-site/YARN.html},
+  urldate = {2025-11-15},
+  file = {C:\Users\Ethel Ogallo\Zotero\storage\GVGTUTKP\YARN.html}
+}
+
+@online{gaydonFRACTALUltraLargeScaleAerial2024,
+  title = {{{FRACTAL}}: {{An Ultra-Large-Scale Aerial Lidar Dataset}} for {{3D Semantic Segmentation}} of {{Diverse Landscapes}}},
+  shorttitle = {{{FRACTAL}}},
+  author = {Gaydon, Charles and Daab, Michel and Roche, Floryne},
+  date = {2024-09-04},
+  eprint = {2405.04634},
+  eprinttype = {arXiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2405.04634},
+  url = {http://arxiv.org/abs/2405.04634},
+  urldate = {2025-11-14},
+  abstract = {Mapping agencies are increasingly adopting Aerial Lidar Scanning (ALS) as a new tool to map buildings and other above-ground structures. Processing ALS data at scale requires efficient point classification methods that perform well over highly diverse territories. Large annotated Lidar datasets are needed to evaluate these classification methods, however, current Lidar benchmarks have restricted scope and often cover a single urban area. To bridge this data gap, we introduce the FRench ALS Clouds from TArgeted Landscapes (FRACTAL) dataset: an ultra-large-scale aerial Lidar dataset made of 100,000 dense point clouds with high quality labels for 7 semantic classes and spanning 250 km\$\textasciicircum 2\$. FRACTAL achieves high spatial and semantic diversity by explicitly sampling rare classes and challenging landscapes from five different regions of France. We describe the data collection, annotation, and curation process of the dataset. We provide baseline semantic segmentation results using a state of the art 3D point cloud classification model. FRACTAL aims to support the development of 3D deep learning approaches for large-scale land monitoring.},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Computer Vision and Pattern Recognition,Computer Science - Machine Learning},
+  file = {C\:\\Users\\Ethel Ogallo\\Zotero\\storage\\RT3W4UYU\\Gaydon et al. - 2024 - FRACTAL An Ultra-Large-Scale Aerial Lidar Dataset for 3D Semantic Segmentation of Diverse Landscape.pdf;C\:\\Users\\Ethel Ogallo\\Zotero\\storage\\98LIZP8I\\2405.html}
+}
+
+@online{MLlibApacheSpark2025,
+  title = {{{MLlib}} | {{Apache Spark}}},
+  year = {15/11/2025, 18:26:56},
+  url = {https://spark.apache.org/mllib/},
+  urldate = {2025-11-15},
+  file = {C:\Users\Ethel Ogallo\Zotero\storage\GXJNBYHG\mllib.html}
+}
+
+@book{polakScalingMachineLearning2023,
+  title = {Scaling Machine Learning with {{Spark}}: Distributed {{ML}} with {{MLlib}}, {{TensorFlow}}, and {{PyTorch}}},
+  shorttitle = {Scaling Machine Learning with {{Spark}}},
+  author = {Polak, Adi},
+  date = {2023},
+  publisher = {O'Reilly},
+  location = {Beijing Boston Farnham Sebastopol Tokyo},
+  isbn = {978-1-0981-0682-9 978-1-0981-0679-9},
+  langid = {english},
+  pagetotal = {1},
+  file = {C:\Users\Ethel Ogallo\Zotero\storage\WF78KRT8\Polak - 2023 - Scaling machine learning with Spark distributed ML with MLlib, TensorFlow, and PyTorch.pdf}
+}
+
+@online{RDDProgrammingGuide2025,
+  title = {{{RDD Programming Guide}} - {{Spark}} 4.0.1 {{Documentation}}},
+  year = {16/11/2025, 00:04:54},
+  url = {https://spark.apache.org/docs/latest/rdd-programming-guide.html#fault-tolerance},
+  urldate = {2025-11-15},
+  file = {C:\Users\Ethel Ogallo\Zotero\storage\9TPV8FAZ\rdd-programming-guide.html}
+}
+
+@online{RunningSparkYARN2025,
+  title = {Running {{Spark}} on {{YARN}} - {{Spark}} 4.0.1 {{Documentation}}},
+  date = {2025-11-16},
+  url = {https://spark.apache.org/docs/latest/running-on-yarn.html},
+  urldate = {2025-11-16},
+  file = {C:\Users\Ethel Ogallo\Zotero\storage\UCLN3CPM\running-on-yarn.html}
+}
+
+@online{WelcomeAWSDocumentation2025,
+  title = {Welcome to {{AWS Documentation}}},
+  year = {15/11/2025, 20:57:22},
+  url = {https://docs.aws.amazon.com/},
+  urldate = {2025-11-15},
+  file = {C:\Users\Ethel Ogallo\Zotero\storage\7H6SI3MG\docs.aws.amazon.com.html}
+}
+
+@online{WhatAWSManagement2025,
+  title = {What Is the {{AWS Management Console}}? - {{AWS Management Console}}},
+  year = {15/11/2025, 20:53:52},
+  url = {https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/what-is.html},
+  urldate = {2025-11-15},
+  file = {C:\Users\Ethel Ogallo\Zotero\storage\G4964TXV\what-is.html}
+}
+
+@book{zahariaResilientDistributedDatasets2012,
+  title = {Resilient Distributed Datasets: {{A}} Fault-Tolerant Abstraction for in-Memory Cluster Computing},
+  shorttitle = {Resilient Distributed Datasets},
+  author = {Zaharia, Matei and Chowdhury, Mosharaf and Das, Tathagata and Dave, Ankur and Ma, Justin and McCauley, Murphy and Franklin, Michael and Shenker, Scott and Stoica, Ion},
+  date = {2012-04-25},
+  journaltitle = {Proceedings of the 9th USENIX Conference on Networked Systems Design and Implementation},
+  pages = {2},
+  abstract = {We present Resilient Distributed Datasets (RDDs), a distributed memory abstraction that lets programmers perform in-memory computations on large clusters in a fault-tolerant manner. RDDs are motivated by two types of applications that current computing frameworks handle inefficiently: iterative algorithms and interactive data mining tools. In both cases, keeping data in memory can improve performance by an order of magnitude. To achieve fault tolerance efficiently, RDDs provide a restricted form of shared memory, based on coarse-grained transformations rather than fine-grained updates to shared state. However, we show that RDDs are expressive enough to capture a wide class of computations, including recent specialized programming models for iterative jobs, such as Pregel, and new applications that these models do not capture. We have implemented RDDs in a system called Spark, which we evaluate through a variety of user applications and benchmarks.},
+  pagetotal = {2},
+  file = {C:\Users\Ethel Ogallo\Zotero\storage\XDC43SEF\Zaharia et al. - 2012 - Resilient distributed datasets A fault-tolerant abstraction for in-memory cluster computing.pdf}
+}

@@ -1,0 +1,571 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{apa/apasortcite//global/global/global}
+    \entry{aishwaryaanandManagingInfrastructureAmazon2017}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=42d8c22375eb4e4003651f40820438c1}{%
+           family={{Aishwarya Anand}},
+           familyi={A\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=def82e0f60245a5af74d746f5afe78fe}{%
+           family={{GD Goenka University}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{e6a759bc778cc686fd8b59a2fae76e8d}
+      \strng{fullhash}{e6a759bc778cc686fd8b59a2fae76e8d}
+      \strng{fullhashraw}{e6a759bc778cc686fd8b59a2fae76e8d}
+      \strng{bibnamehash}{e6a759bc778cc686fd8b59a2fae76e8d}
+      \strng{authorbibnamehash}{e6a759bc778cc686fd8b59a2fae76e8d}
+      \strng{authornamehash}{e6a759bc778cc686fd8b59a2fae76e8d}
+      \strng{authorfullhash}{e6a759bc778cc686fd8b59a2fae76e8d}
+      \strng{authorfullhashraw}{e6a759bc778cc686fd8b59a2fae76e8d}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Amazon EC2 provides a centralized control over all the resources and an efficient computing environment. EC2 is very beneficial as it provides Auto-Scaling capability by which resources are scaled automatically when required without any friction. Amazon EC2 service level agreements commitment is 99.95\%, which makes it highly reliable. AWS CloudWatch is a service provided by Amazon that basically reduces the time to detect and recover from issues. Amazon web services are mainly targeted at organizations that have multiple users or various systems that use AWS products such as EC2, Amazon S3 and others. IAM (Identity and access management) is used to manage all the users of AWS by having a central control, providing access keys, granting user permissions that control the access to various AWS resource.}
+      \field{day}{25}
+      \field{issn}{2278-0181}
+      \field{journaltitle}{International Journal of Engineering Research and}
+      \field{langid}{english}
+      \field{month}{3}
+      \field{number}{03}
+      \field{shortjournal}{IJERT}
+      \field{title}{Managing {{Infrastructure}} in {{Amazon}} Using {{EC2}}, {{CloudWatch}}, {{EBS}}, {{IAM}} and {{CloudFront}}}
+      \field{urlday}{15}
+      \field{urlmonth}{11}
+      \field{urlyear}{2025}
+      \field{volume}{V6}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{IJERTV6IS030335}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.17577/IJERTV6IS030335
+      \endverb
+      \verb{file}
+      \verb C:\Users\Ethel Ogallo\Zotero\storage\JNVX35L4\Aishwarya Anand and GD Goenka University - 2017 - Managing Infrastructure in Amazon using EC2, CloudWatch, EBS, IAM and CloudFront.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://www.ijert.org/view-pdf/16443/managing-infrastructure-in-amazon-using-ec2-cloudwatch-ebs-iam-and-cloudfront
+      \endverb
+      \verb{url}
+      \verb http://www.ijert.org/view-pdf/16443/managing-infrastructure-in-amazon-using-ec2-cloudwatch-ebs-iam-and-cloudfront
+      \endverb
+    \endentry
+    \entry{AmazonEMRArchitecture2025}{online}{}{}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labeltitlesource}{title}
+      \field{title}{Amazon {{EMR}} Architecture and Service Layers - {{Amazon EMR}}}
+      \field{urlday}{14}
+      \field{urlmonth}{11}
+      \field{urlyear}{2025}
+      \field{year}{14/11/2025, 12:01:15}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb C:\Users\Ethel Ogallo\Zotero\storage\BXPV7VAZ\emr-overview-arch.html
+      \endverb
+      \verb{urlraw}
+      \verb https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-overview-arch.html#emr-arch-resource-management
+      \endverb
+      \verb{url}
+      \verb https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-overview-arch.html#emr-arch-resource-management
+      \endverb
+    \endentry
+    \entry{ApacheHadoop3422025}{online}{}{}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labeltitlesource}{title}
+      \field{title}{Apache {{Hadoop}} 3.4.2 – {{Apache Hadoop YARN}}}
+      \field{urlday}{15}
+      \field{urlmonth}{11}
+      \field{urlyear}{2025}
+      \field{year}{15/11/2025, 23:40:43}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb C:\Users\Ethel Ogallo\Zotero\storage\GVGTUTKP\YARN.html
+      \endverb
+      \verb{urlraw}
+      \verb https://hadoop.apache.org/docs/stable/hadoop-yarn/hadoop-yarn-site/YARN.html
+      \endverb
+      \verb{url}
+      \verb https://hadoop.apache.org/docs/stable/hadoop-yarn/hadoop-yarn-site/YARN.html
+      \endverb
+    \endentry
+    \entry{gaydonFRACTALUltraLargeScaleAerial2024}{online}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=3220870aa53b91db381eec9dd0f51c25}{%
+           family={Gaydon},
+           familyi={G\bibinitperiod},
+           given={Charles},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=668f16a79d6cb2ed3ec779c994b91593}{%
+           family={Daab},
+           familyi={D\bibinitperiod},
+           given={Michel},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cff05ae7a9d4611609a3f5b0110062f2}{%
+           family={Roche},
+           familyi={R\bibinitperiod},
+           given={Floryne},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{9fb8e94ee077ed62bbed6daa54824b69}
+      \strng{fullhash}{2f596899c6ea24412339851535443d23}
+      \strng{fullhashraw}{2f596899c6ea24412339851535443d23}
+      \strng{bibnamehash}{2f596899c6ea24412339851535443d23}
+      \strng{authorbibnamehash}{2f596899c6ea24412339851535443d23}
+      \strng{authornamehash}{9fb8e94ee077ed62bbed6daa54824b69}
+      \strng{authorfullhash}{2f596899c6ea24412339851535443d23}
+      \strng{authorfullhashraw}{2f596899c6ea24412339851535443d23}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Mapping agencies are increasingly adopting Aerial Lidar Scanning (ALS) as a new tool to map buildings and other above-ground structures. Processing ALS data at scale requires efficient point classification methods that perform well over highly diverse territories. Large annotated Lidar datasets are needed to evaluate these classification methods, however, current Lidar benchmarks have restricted scope and often cover a single urban area. To bridge this data gap, we introduce the FRench ALS Clouds from TArgeted Landscapes (FRACTAL) dataset: an ultra-large-scale aerial Lidar dataset made of 100,000 dense point clouds with high quality labels for 7 semantic classes and spanning 250 km\$\textasciicircum 2\$. FRACTAL achieves high spatial and semantic diversity by explicitly sampling rare classes and challenging landscapes from five different regions of France. We describe the data collection, annotation, and curation process of the dataset. We provide baseline semantic segmentation results using a state of the art 3D point cloud classification model. FRACTAL aims to support the development of 3D deep learning approaches for large-scale land monitoring.}
+      \field{day}{4}
+      \field{eprintclass}{cs}
+      \field{eprinttype}{arXiv}
+      \field{month}{9}
+      \field{shorttitle}{{{FRACTAL}}}
+      \field{title}{{{FRACTAL}}: {{An Ultra-Large-Scale Aerial Lidar Dataset}} for {{3D Semantic Segmentation}} of {{Diverse Landscapes}}}
+      \field{urlday}{14}
+      \field{urlmonth}{11}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.48550/arXiv.2405.04634
+      \endverb
+      \verb{eprint}
+      \verb 2405.04634
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\Ethel Ogallo\\Zotero\\storage\\RT3W4UYU\\Gaydon et al. - 2024 - FRACTAL An Ultra-Large-Scale Aerial Lidar Dataset for 3D Semantic Segmentation of Diverse Landscape.pdf;C\:\\Users\\Ethel Ogallo\\Zotero\\storage\\98LIZP8I\\2405.html
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/2405.04634
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/2405.04634
+      \endverb
+      \keyw{Computer Science - Computer Vision and Pattern Recognition,Computer Science - Machine Learning}
+    \endentry
+    \entry{MLlibApacheSpark2025}{online}{}{}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labeltitlesource}{title}
+      \field{title}{{{MLlib}} | {{Apache Spark}}}
+      \field{urlday}{15}
+      \field{urlmonth}{11}
+      \field{urlyear}{2025}
+      \field{year}{15/11/2025, 18:26:56}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb C:\Users\Ethel Ogallo\Zotero\storage\GXJNBYHG\mllib.html
+      \endverb
+      \verb{urlraw}
+      \verb https://spark.apache.org/mllib/
+      \endverb
+      \verb{url}
+      \verb https://spark.apache.org/mllib/
+      \endverb
+    \endentry
+    \entry{polakScalingMachineLearning2023}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=d04c99778bf147b88c43ff79d25a52f1}{%
+           family={Polak},
+           familyi={P\bibinitperiod},
+           given={Adi},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Beijing Boston Farnham Sebastopol Tokyo}%
+      }
+      \list{publisher}{1}{%
+        {O'Reilly}%
+      }
+      \strng{namehash}{d04c99778bf147b88c43ff79d25a52f1}
+      \strng{fullhash}{d04c99778bf147b88c43ff79d25a52f1}
+      \strng{fullhashraw}{d04c99778bf147b88c43ff79d25a52f1}
+      \strng{bibnamehash}{d04c99778bf147b88c43ff79d25a52f1}
+      \strng{authorbibnamehash}{d04c99778bf147b88c43ff79d25a52f1}
+      \strng{authornamehash}{d04c99778bf147b88c43ff79d25a52f1}
+      \strng{authorfullhash}{d04c99778bf147b88c43ff79d25a52f1}
+      \strng{authorfullhashraw}{d04c99778bf147b88c43ff79d25a52f1}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{isbn}{978-1-0981-0682-9 978-1-0981-0679-9}
+      \field{langid}{english}
+      \field{pagetotal}{1}
+      \field{shorttitle}{Scaling Machine Learning with {{Spark}}}
+      \field{title}{Scaling Machine Learning with {{Spark}}: Distributed {{ML}} with {{MLlib}}, {{TensorFlow}}, and {{PyTorch}}}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb C:\Users\Ethel Ogallo\Zotero\storage\WF78KRT8\Polak - 2023 - Scaling machine learning with Spark distributed ML with MLlib, TensorFlow, and PyTorch.pdf
+      \endverb
+    \endentry
+    \entry{RDDProgrammingGuide2025}{online}{}{}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labeltitlesource}{title}
+      \field{title}{{{RDD Programming Guide}} - {{Spark}} 4.0.1 {{Documentation}}}
+      \field{urlday}{15}
+      \field{urlmonth}{11}
+      \field{urlyear}{2025}
+      \field{year}{16/11/2025, 00:04:54}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb C:\Users\Ethel Ogallo\Zotero\storage\9TPV8FAZ\rdd-programming-guide.html
+      \endverb
+      \verb{urlraw}
+      \verb https://spark.apache.org/docs/latest/rdd-programming-guide.html#fault-tolerance
+      \endverb
+      \verb{url}
+      \verb https://spark.apache.org/docs/latest/rdd-programming-guide.html#fault-tolerance
+      \endverb
+    \endentry
+    \entry{WelcomeAWSDocumentation2025}{online}{}{}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labeltitlesource}{title}
+      \field{title}{Welcome to {{AWS Documentation}}}
+      \field{urlday}{15}
+      \field{urlmonth}{11}
+      \field{urlyear}{2025}
+      \field{year}{15/11/2025, 20:57:22}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb C:\Users\Ethel Ogallo\Zotero\storage\7H6SI3MG\docs.aws.amazon.com.html
+      \endverb
+      \verb{urlraw}
+      \verb https://docs.aws.amazon.com/
+      \endverb
+      \verb{url}
+      \verb https://docs.aws.amazon.com/
+      \endverb
+    \endentry
+  \enddatalist
+  \datalist[entry]{apa/global//global/global/global}
+    \entry{aishwaryaanandManagingInfrastructureAmazon2017}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=42d8c22375eb4e4003651f40820438c1}{%
+           family={{Aishwarya Anand}},
+           familyi={A\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=def82e0f60245a5af74d746f5afe78fe}{%
+           family={{GD Goenka University}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{e6a759bc778cc686fd8b59a2fae76e8d}
+      \strng{fullhash}{e6a759bc778cc686fd8b59a2fae76e8d}
+      \strng{fullhashraw}{e6a759bc778cc686fd8b59a2fae76e8d}
+      \strng{bibnamehash}{e6a759bc778cc686fd8b59a2fae76e8d}
+      \strng{authorbibnamehash}{e6a759bc778cc686fd8b59a2fae76e8d}
+      \strng{authornamehash}{e6a759bc778cc686fd8b59a2fae76e8d}
+      \strng{authorfullhash}{e6a759bc778cc686fd8b59a2fae76e8d}
+      \strng{authorfullhashraw}{e6a759bc778cc686fd8b59a2fae76e8d}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Amazon EC2 provides a centralized control over all the resources and an efficient computing environment. EC2 is very beneficial as it provides Auto-Scaling capability by which resources are scaled automatically when required without any friction. Amazon EC2 service level agreements commitment is 99.95\%, which makes it highly reliable. AWS CloudWatch is a service provided by Amazon that basically reduces the time to detect and recover from issues. Amazon web services are mainly targeted at organizations that have multiple users or various systems that use AWS products such as EC2, Amazon S3 and others. IAM (Identity and access management) is used to manage all the users of AWS by having a central control, providing access keys, granting user permissions that control the access to various AWS resource.}
+      \field{day}{25}
+      \field{issn}{2278-0181}
+      \field{journaltitle}{International Journal of Engineering Research and}
+      \field{langid}{english}
+      \field{month}{3}
+      \field{number}{03}
+      \field{shortjournal}{IJERT}
+      \field{title}{Managing {{Infrastructure}} in {{Amazon}} Using {{EC2}}, {{CloudWatch}}, {{EBS}}, {{IAM}} and {{CloudFront}}}
+      \field{urlday}{15}
+      \field{urlmonth}{11}
+      \field{urlyear}{2025}
+      \field{volume}{V6}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{IJERTV6IS030335}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.17577/IJERTV6IS030335
+      \endverb
+      \verb{file}
+      \verb C:\Users\Ethel Ogallo\Zotero\storage\JNVX35L4\Aishwarya Anand and GD Goenka University - 2017 - Managing Infrastructure in Amazon using EC2, CloudWatch, EBS, IAM and CloudFront.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://www.ijert.org/view-pdf/16443/managing-infrastructure-in-amazon-using-ec2-cloudwatch-ebs-iam-and-cloudfront
+      \endverb
+      \verb{url}
+      \verb http://www.ijert.org/view-pdf/16443/managing-infrastructure-in-amazon-using-ec2-cloudwatch-ebs-iam-and-cloudfront
+      \endverb
+    \endentry
+    \entry{AmazonEMRArchitecture2025}{online}{}{}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labeltitlesource}{title}
+      \field{title}{Amazon {{EMR}} Architecture and Service Layers - {{Amazon EMR}}}
+      \field{urlday}{14}
+      \field{urlmonth}{11}
+      \field{urlyear}{2025}
+      \field{year}{14/11/2025, 12:01:15}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb C:\Users\Ethel Ogallo\Zotero\storage\BXPV7VAZ\emr-overview-arch.html
+      \endverb
+      \verb{urlraw}
+      \verb https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-overview-arch.html#emr-arch-resource-management
+      \endverb
+      \verb{url}
+      \verb https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-overview-arch.html#emr-arch-resource-management
+      \endverb
+    \endentry
+    \entry{ApacheHadoop3422025}{online}{}{}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labeltitlesource}{title}
+      \field{title}{Apache {{Hadoop}} 3.4.2 – {{Apache Hadoop YARN}}}
+      \field{urlday}{15}
+      \field{urlmonth}{11}
+      \field{urlyear}{2025}
+      \field{year}{15/11/2025, 23:40:43}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb C:\Users\Ethel Ogallo\Zotero\storage\GVGTUTKP\YARN.html
+      \endverb
+      \verb{urlraw}
+      \verb https://hadoop.apache.org/docs/stable/hadoop-yarn/hadoop-yarn-site/YARN.html
+      \endverb
+      \verb{url}
+      \verb https://hadoop.apache.org/docs/stable/hadoop-yarn/hadoop-yarn-site/YARN.html
+      \endverb
+    \endentry
+    \entry{gaydonFRACTALUltraLargeScaleAerial2024}{online}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=3220870aa53b91db381eec9dd0f51c25}{%
+           family={Gaydon},
+           familyi={G\bibinitperiod},
+           given={Charles},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=668f16a79d6cb2ed3ec779c994b91593}{%
+           family={Daab},
+           familyi={D\bibinitperiod},
+           given={Michel},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cff05ae7a9d4611609a3f5b0110062f2}{%
+           family={Roche},
+           familyi={R\bibinitperiod},
+           given={Floryne},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{9fb8e94ee077ed62bbed6daa54824b69}
+      \strng{fullhash}{2f596899c6ea24412339851535443d23}
+      \strng{fullhashraw}{2f596899c6ea24412339851535443d23}
+      \strng{bibnamehash}{2f596899c6ea24412339851535443d23}
+      \strng{authorbibnamehash}{2f596899c6ea24412339851535443d23}
+      \strng{authornamehash}{9fb8e94ee077ed62bbed6daa54824b69}
+      \strng{authorfullhash}{2f596899c6ea24412339851535443d23}
+      \strng{authorfullhashraw}{2f596899c6ea24412339851535443d23}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Mapping agencies are increasingly adopting Aerial Lidar Scanning (ALS) as a new tool to map buildings and other above-ground structures. Processing ALS data at scale requires efficient point classification methods that perform well over highly diverse territories. Large annotated Lidar datasets are needed to evaluate these classification methods, however, current Lidar benchmarks have restricted scope and often cover a single urban area. To bridge this data gap, we introduce the FRench ALS Clouds from TArgeted Landscapes (FRACTAL) dataset: an ultra-large-scale aerial Lidar dataset made of 100,000 dense point clouds with high quality labels for 7 semantic classes and spanning 250 km\$\textasciicircum 2\$. FRACTAL achieves high spatial and semantic diversity by explicitly sampling rare classes and challenging landscapes from five different regions of France. We describe the data collection, annotation, and curation process of the dataset. We provide baseline semantic segmentation results using a state of the art 3D point cloud classification model. FRACTAL aims to support the development of 3D deep learning approaches for large-scale land monitoring.}
+      \field{day}{4}
+      \field{eprintclass}{cs}
+      \field{eprinttype}{arXiv}
+      \field{month}{9}
+      \field{shorttitle}{{{FRACTAL}}}
+      \field{title}{{{FRACTAL}}: {{An Ultra-Large-Scale Aerial Lidar Dataset}} for {{3D Semantic Segmentation}} of {{Diverse Landscapes}}}
+      \field{urlday}{14}
+      \field{urlmonth}{11}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.48550/arXiv.2405.04634
+      \endverb
+      \verb{eprint}
+      \verb 2405.04634
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\Ethel Ogallo\\Zotero\\storage\\RT3W4UYU\\Gaydon et al. - 2024 - FRACTAL An Ultra-Large-Scale Aerial Lidar Dataset for 3D Semantic Segmentation of Diverse Landscape.pdf;C\:\\Users\\Ethel Ogallo\\Zotero\\storage\\98LIZP8I\\2405.html
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/2405.04634
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/2405.04634
+      \endverb
+      \keyw{Computer Science - Computer Vision and Pattern Recognition,Computer Science - Machine Learning}
+    \endentry
+    \entry{MLlibApacheSpark2025}{online}{}{}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labeltitlesource}{title}
+      \field{title}{{{MLlib}} | {{Apache Spark}}}
+      \field{urlday}{15}
+      \field{urlmonth}{11}
+      \field{urlyear}{2025}
+      \field{year}{15/11/2025, 18:26:56}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb C:\Users\Ethel Ogallo\Zotero\storage\GXJNBYHG\mllib.html
+      \endverb
+      \verb{urlraw}
+      \verb https://spark.apache.org/mllib/
+      \endverb
+      \verb{url}
+      \verb https://spark.apache.org/mllib/
+      \endverb
+    \endentry
+    \entry{polakScalingMachineLearning2023}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=d04c99778bf147b88c43ff79d25a52f1}{%
+           family={Polak},
+           familyi={P\bibinitperiod},
+           given={Adi},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Beijing Boston Farnham Sebastopol Tokyo}%
+      }
+      \list{publisher}{1}{%
+        {O'Reilly}%
+      }
+      \strng{namehash}{d04c99778bf147b88c43ff79d25a52f1}
+      \strng{fullhash}{d04c99778bf147b88c43ff79d25a52f1}
+      \strng{fullhashraw}{d04c99778bf147b88c43ff79d25a52f1}
+      \strng{bibnamehash}{d04c99778bf147b88c43ff79d25a52f1}
+      \strng{authorbibnamehash}{d04c99778bf147b88c43ff79d25a52f1}
+      \strng{authornamehash}{d04c99778bf147b88c43ff79d25a52f1}
+      \strng{authorfullhash}{d04c99778bf147b88c43ff79d25a52f1}
+      \strng{authorfullhashraw}{d04c99778bf147b88c43ff79d25a52f1}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{isbn}{978-1-0981-0682-9 978-1-0981-0679-9}
+      \field{langid}{english}
+      \field{pagetotal}{1}
+      \field{shorttitle}{Scaling Machine Learning with {{Spark}}}
+      \field{title}{Scaling Machine Learning with {{Spark}}: Distributed {{ML}} with {{MLlib}}, {{TensorFlow}}, and {{PyTorch}}}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb C:\Users\Ethel Ogallo\Zotero\storage\WF78KRT8\Polak - 2023 - Scaling machine learning with Spark distributed ML with MLlib, TensorFlow, and PyTorch.pdf
+      \endverb
+    \endentry
+    \entry{RDDProgrammingGuide2025}{online}{}{}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labeltitlesource}{title}
+      \field{title}{{{RDD Programming Guide}} - {{Spark}} 4.0.1 {{Documentation}}}
+      \field{urlday}{15}
+      \field{urlmonth}{11}
+      \field{urlyear}{2025}
+      \field{year}{16/11/2025, 00:04:54}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb C:\Users\Ethel Ogallo\Zotero\storage\9TPV8FAZ\rdd-programming-guide.html
+      \endverb
+      \verb{urlraw}
+      \verb https://spark.apache.org/docs/latest/rdd-programming-guide.html#fault-tolerance
+      \endverb
+      \verb{url}
+      \verb https://spark.apache.org/docs/latest/rdd-programming-guide.html#fault-tolerance
+      \endverb
+    \endentry
+    \entry{WelcomeAWSDocumentation2025}{online}{}{}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labeltitlesource}{title}
+      \field{title}{Welcome to {{AWS Documentation}}}
+      \field{urlday}{15}
+      \field{urlmonth}{11}
+      \field{urlyear}{2025}
+      \field{year}{15/11/2025, 20:57:22}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb C:\Users\Ethel Ogallo\Zotero\storage\7H6SI3MG\docs.aws.amazon.com.html
+      \endverb
+      \verb{urlraw}
+      \verb https://docs.aws.amazon.com/
+      \endverb
+      \verb{url}
+      \verb https://docs.aws.amazon.com/
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

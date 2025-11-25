@@ -1,0 +1,459 @@
+\documentclass[12pt,a4paper]{article}
+
+% ===== FONTS =====
+\usepackage{times}
+
+
+% ===== BASIC SETUP =====
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{booktabs}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{caption}
+\captionsetup[figure]{textfont=it,font=small} % label bold, text italic
+\usepackage[style=apa, backend=biber]{biblatex}
+\addbibresource{references.biblatex} % BibLaTeX bibliography file
+
+\geometry{margin=1in}
+% \onehalfspacing  % 1.5 spacing like a normal report
+\usepackage{setspace}
+\setstretch{1.08}  % Slightly more than single spacing
+
+
+% ===== PARAGRAPH FORMATTING =====
+\setlength{\parskip}{0.3em}  % Add vertical space between paragraphs
+\setlength{\parindent}{0pt} % Remove paragraph indentation
+
+% ----- Header/Footer Setup -----
+\pagestyle{fancy}
+\fancyhf{} % Clear default header/footer
+\fancyhead[L]{\textcolor{black!30}{Bruna Candido; Ethel Ogallo}} % 50% transparent
+\fancyhead[R]{\textcolor{black!30}{Big Data}}                     % 50% transparent
+\fancyfoot[C]{\thepage}                     % Centered page number in footer
+\renewcommand{\headrulewidth}{0.pt} % Removes thick line under header
+
+% ----------------------------------------------------
+\begin{document}
+
+% ----------------------------------------------------
+% CUSTOM TITLE PAGE
+% ----------------------------------------------------
+\begin{titlepage}
+\thispagestyle{empty} % Removes header/footer from title page
+    \centering
+
+    \vfill  % Push content down from the top
+
+    {\LARGE \textbf{Scaling Machine Learning with Spark:}\par}
+    \vspace{0.5cm}
+    {\large \textbf{Land Cover Classification on FRACTAL Dataset}\par}
+
+    \vspace{1.5cm}
+
+    {\large \textbf{Course:}\\
+    Big Data\par}
+
+    \vspace{1.5cm}
+
+    {\large \textbf{Submitted by:}\\
+    Bruna Candido \\ 
+    Ethel Ogallo\par}
+
+    \vspace{1.5cm}
+
+    {\large \textbf{Date:}\\
+    16/11/2024\par}
+
+    \vfill
+\end{titlepage}
+
+% ----------------------------------------------------
+% TABLE OF CONTENTS
+% ----------------------------------------------------
+\tableofcontents
+\newpage
+
+% ----------------------------------------------------
+% BODY
+% ----------------------------------------------------
+
+% ----------------------------------------------------
+% CHAPTER 1: INTRODUCTION
+% ----------------------------------------------------
+\section{Introduction}
+
+In the field of Remote Sensing and Machine Learning, researchers are always dealing with a
+huge amount of data especially when working with land cover classification, a broad set of
+variables can be employed as input features to distinguish among soil types. Moreover, when
+talking about supervised machine learning algorithms, it is crucial to have a considerable
+amount of labelled data, so the model can properly learn how to classify it. The FRACTAL
+Dataset, published by \parencite{gaydonFRACTALUltraLargeScaleAerial2024} is an example of dataset developed for that.
+Therefore, as other big data datasets, it is not possible to use it entirely to train a machine
+learning model on a single regular computer.
+
+With cloud computing, this process can be efficiently performed in the cloud, instead of running
+locally. However to do that, it is necessary to employ tools that have been developed for this
+purpose, such as Apache Spark, which is a large-scale analytics engine for data processing,
+PySpark, an interface for Apache Spark in Python, and MLflow, an open-source platform for
+managing the machine learning lifecycle \parencite{polakScalingMachineLearning2023}. A processing platform is also necessary,
+such as Amazon Elastic MapReduce (AWS EMR). Additionally, the large dataset must be stored
+somewhere, and for that, a good choice is the Amazon Simple Storage Service (S3). With AWS
+EMR it allows us to separate storage from compute, enabling clusters to be created and
+terminated without losing data. It also provides scalable, durable, and low-cost storage that
+integrates natively with Spark.
+
+Besides the challenge of running the codes itself, another challenge commonly faced by
+researchers is making their codes and research reproducible.
+
+In our context, the purpose of this study was to:
+
+\begin{itemize}
+    \item Choose, implement and evaluate a Machine Learning (ML) algorithm for land cover classification on the FRACTAL dataset.
+    \item Process and prepare the FRACTAL dataset using PySpark or MLlib using distributed computing technologies including S3 and Amazon EMR.
+    \item Experiment with the scalability of the distributed computing pipeline by using different data samples, Spark configurations, and cluster setups.
+    \item Ensure reproducibility through well documented code and by providing all the specific parameter details required to reproduce the workflow.
+\end{itemize}
+
+
+% ----------------------------------------------------
+% CHAPTER 2: DATA AND TOOLS
+% ----------------------------------------------------
+\section{Data and Tools}
+
+% ----- dataset -----
+\subsection{Dataset}
+
+FRACTAL: \emph{An Ultra-Large-Scale Aerial Lidar Dataset for 3D Semantic Segmentation of Diverse Landscapes} \parencite{gaydonFRACTALUltraLargeScaleAerial2024} is a large-scale aerial Lidar dataset designed for 3D segmentation of diverse landscapes for land monitoring. 
+
+It is a dense point cloud covering 250 km² in France and includes seven semantic soil classes: ground, vegetation, building, water, bridge, permanent structure, and other. The whole dataset size is about 180 GB. 
+
+The dataset was stored in an Amazon S3 bucket in \textbf{Parquet} format and was divided into three folders: \textbf{train} (80\%), \textbf{test} (10\%), and \textbf{validation} (10\%).
+
+% ----- tools -----
+\subsection{Tools}
+
+Given the dataset size, the code had to be scaled for training, as it would not fit in a single machine's memory. The following tools were used to enable scalability:
+
+\begin{itemize}
+    \item \textbf{Apache Spark:} An open-source distributed computing framework widely used for large-data processing. Spark provides in-memory computation, which significantly speeds up data analysis and supports implementing ML algorithms through APIs in Python, Java, and Scala \parencite{polakScalingMachineLearning2023}.
+
+    \item \textbf{MLlib:} The Machine Learning Library from Apache Spark, designed to facilitate ML tasks with scalability and easy integration. MLlib supports preprocessing, training models, and making predictions on large datasets \parencite{MLlibApacheSpark2025}.
+
+    \item \textbf{AWS Infrastructure:} Multiple AWS services were used to support big data processing:
+    \begin{itemize}
+        \item \textbf{AWS Management Console:} Web-based application providing centralized access to all AWS service consoles \parencite{WelcomeAWSDocumentation2025}.
+        \item \textbf{Amazon EC2 (Elastic Compute Cloud):} Provides on-demand, scalable computing capabilities in the cloud \parencite{aishwaryaanandManagingInfrastructureAmazon2017,WelcomeAWSDocumentation2025}.
+        \item \textbf{Amazon S3:} Object storage service offering scalability, availability, security, and performance \parencite{WelcomeAWSDocumentation2025}.
+        \item \textbf{Amazon EMR (Elastic MapReduce):} Managed cluster platform that simplifies running big data frameworks like Hadoop and Spark on AWS to process and analyze vast amounts of data \parencite{WelcomeAWSDocumentation2025}.
+    \end{itemize}
+\end{itemize}
+
+
+% ----------------------------------------------------
+% CHAPTER 3: METHODOLOGY
+% ----------------------------------------------------
+\section{Methodology}
+
+% --------- overall ----------
+\subsection{Overall Architecture}
+
+The overall architecture as shown in Figure~\ref{fig:architecture} is set up to enable execution of a large-scale machine learning workflow processed efficiently, scalable and parallelized. The Amazon S3, the storage layer discussed in section 2, is where the FRACTAL dataset is stored as well as the processing, model and metric results stored.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/overall.png}
+    \caption{Overall architecture of the cloud distributed system utilized.}
+    \label{fig:architecture}
+\end{figure}
+
+The resource management layer is the core processing environment as it is responsible for scheduling the jobs for 
+processing data \parencite{AmazonEMRArchitecture2025}. It includes the EMR cluster, 
+the master node and worker nodes.
+
+The master node hosts the Spark Driver, which is responsible for executing the SparkSession, maintaining the DAG 
+scheduler and block manager. The driver works together with the cluster manager, i.e. Hadoop YARN (Yet Another 
+Resource Negotiator), which has scheduling policies that govern how cluster resources are allocated among competing
+ jobs \parencite{ApacheHadoop3422025}. These policies impact job start times, resource contention, and overall 
+ cluster efficiency, influencing the performance patterns observed in our experiments on shared EMR clusters.
+
+The worker nodes run one or more Spark Executors which executes the computational tasks in parallel and hold the 
+in-memory data partitions used during processing \parencite{polakScalingMachineLearning2023}. Spark ensures 
+executors can recover from failures through its built-in fault-tolerance mechanisms, allowing tasks to be retried 
+on other nodes and ensuring uninterrupted execution on the EMR cluster \parencite{polakScalingMachineLearning2023, RDDProgrammingGuide2025}.
+
+
+% ----------- spark ----------
+\subsection{Spark Machine Learning Pipeline}
+
+The scalable Spark machine learning pipeline, as shown in Figure~\ref{fig:pipeline}, was set up and implemented 
+to support a multi-class land-cover classification task. The overall workflow consists of distributed data 
+ingestion, preprocessing, feature engineering, and model training using Spark MLlib.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/spark ML.png}
+    \caption{Spark machine learning pipeline workflow.}
+    \label{fig:pipeline}
+\end{figure}
+
+We initially loaded the data stored in S3 in the parquet format for preprocessing and performed exploratory data 
+analysis to understand it. The data was generally clean and therefore we did not check for missing data or 
+outliers, we did however check for the distribution of the classification to inform the sampling process for the 
+scaling experiment. To do this we first did label encoding which involved remapped the classification feature 
+according to the semantic classes defined in \parencite{gaydonFRACTALUltraLargeScaleAerial2024} including the 
+additional `aesthetics' class to avoid adding nulls into the data. Table~\ref{tab:class_distribution} summarizes 
+the class distribution across the training, validation, and test sets:
+
+\begin{table}[h!]
+\centering
+\caption{Classification distribution in the full FRACTAL dataset.}
+\label{tab:class_distribution}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Classification} & \textbf{Train (\%)} & \textbf{Test (\%)} & \textbf{Val (\%)} \\
+\midrule
+Unclassified & 0.56 & 0.67 & 0.53 \\
+Ground & 38.97 & 40.49 & 39.10 \\
+Vegetation & 56.98 & 54.09 & 56.93 \\
+Building & 2.80 & 3.34 & 2.80 \\
+Water & 0.52 & 1.20 & 0.49 \\
+Bridge & 0.13 & 0.16 & 0.10 \\
+Permanent Structures & 0.04 & 0.03 & 0.04 \\
+Filtered/Artifacts & 0.01 & 0.03 & 0.01 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The distribution shows that the data is well-balanced across classes, which informed efficient sampling strategies 
+for scaling experiments and model choice and training process.
+
+The full machine learning pipeline was then setup including data ingestion, feature engineering and feature 
+selection. Initially we loaded the full dataset and then sampled a smaller fraction. This however led to slower 
+execution time and I/O bottlenecks. We then implemented a file sampling method where we first list all the files 
+in the directory and then randomly selects a sample fraction of the data (i.e. 1\%, 3\% and 5\%). The selected 
+sample files are then read into Spark DataFrames and then repartitioned to ensure parallelism is maintained as 
+the data sample size increases.
+
+Additional features such as z-norm (normalized height) and NDVI which would provide relevant information for land 
+cover classification. This was done using spark pipeline and Transformer APIs to ensure reproducibility and 
+scalability. For feature selection, the VectorAssembler transformer was applied to combine the specific selected 
+features into a one vector column, because it is the required input format for MLlib.
+
+The model classifier used in the pipeline was Random Forest, trained on the training dataset. We performed 
+hyperparameter tuning on the number of trees and selected the value that achieved the highest validation accuracy. 
+The final model was then refit with the new parameters on only the training set, rather than a combined train and 
+validation set as is standard in ML workflows because of memory constraints and the size of the data. The final 
+model then evaluated on the final test dataset giving the outputs of this workflow as the model, validation 
+accuracy, best parameters and the test accuracy.
+
+% ----------------------------------------------------
+% CHAPTER 4: TECHNICAL CHOICES
+% ----------------------------------------------------
+\section{Technical Choices}
+
+While conducting the scaling experiment, we had access to two EMR-based Spark cluster configurations: a 32-node 
+cluster shared among 13 users, and an 8-node cluster shared between two users where both clusters used the same 
+node types, consisting of one master node and worker nodes. The master node was an m5.4xlarge instance that has 
+an Intel Xeon Platinum processor (8 physical cores / 16 vCPUs at 3.1 GHz) and 64 GB RAM. The worker nodes were 
+r6i.2xlarge instances, each with 4 physical cores (8 vCPUs) at 3.1 GHz and 64 GB RAM.
+
+The aggregated resources of each cluster are then as such:
+
+\begin{itemize}
+    \item \textbf{8-node cluster (1 master + 7 workers)} \\
+    Total resources: 36 physical cores (72 vCPUs) and 512 GB RAM \\
+    Effective for spark: 64 vCPUs and 460.8 GB RAM
+    \item \textbf{32-node cluster (1 master + 31 workers)} \\
+    Total resources: 132 physical cores (264 vCPUs) and 2,048 GB RAM \\
+    Effective for spark: 248 vCPUs and 1,843.2 GB RAM
+\end{itemize}
+
+Because Spark, YARN, the operating system, and HDFS require their own overhead, each node must reserve at least 
+1 vCPU and approximately 10\% of total memory for system processes. This significantly affects how we configure 
+Spark executors.
+
+The configurations below illustrate the specific trade-offs between CPU and memory allocation on each node, 
+highlighting how these choices impact system performance and resource utilization:
+
+\begin{itemize}
+    \item Using 64 executors and 1 core per executor would result in no vCPUs left for system processes and an 8GB executor memory does not leave sufficient memory for YARN and HDFS.
+    \item Configuring 8 executors with 8 core per executor also leaves no spare vCPUs for the OS, and 64GB executor memory uses all available memory per node.
+\end{itemize}
+
+To balance CPU, memory, and system overhead, the configurations in Table~\ref{tab:section4} were selected as a baseline for all experiments.
+
+\begin{table}[h!]
+\centering
+\caption{Parameters chosen and rationale.}
+\label{tab:section4}
+\begin{tabular}{p{5cm} p{10cm}} % adjust widths to fit your page
+\toprule
+\textbf{Parameter Choice} & \textbf{Justification} \\
+\midrule
+Number of Executors & Selected as the primary variable to test scaling effects on runtime and parallelism. \\
+Executor Cores & The number chosen to leave sufficient CPU capacity for YARN OS, and Spark overhead processes balancing task-level parallelism and resource overhead. \\
+Executor Memory & Balanced to provide enough memory for processing without excessive spilling, while reserving memory for system-level operations. \\
+Driver Memory & Allocated to support efficient DAG scheduling and job coordination without over-provisioning master node resources. \\
+Data Partitioning Strategy & Designed to ensure even task distribution across the cluster i.e. avoid creating too many small partitions or too few large ones. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+% ----------------------------------------------------
+% CHAPTER 5: SCALING EXPERIMENT
+% ----------------------------------------------------
+\section{Scaling Experiment}
+
+% -------------- setup ---------------
+\subsection{Experiment Setup}
+
+As mentioned in section 4, the experiments were conducted on two different cluster configurations. 
+The first set of experiments used a 32-node cluster, while later experiments were repeated on a smaller 
+8-node cluster as that was the one available during scaling experiments. Both clusters used the same instance 
+types described in Section 4 and used the same Spark configurations logic shown in Table~\ref{tab:spark_params}.
+
+\begin{table}[h!]
+\centering
+\caption{Spark configuration parameters}
+\label{tab:spark_params}
+\begin{tabular}{lll}
+\toprule
+\textbf{Parameter Coice} & \textbf{Value} \\
+\midrule
+Data sample size &  1\%, 3\% and 5\% \\
+Number of Executors &  8, 16, 24, 30 and 32 \\
+Number of cores per executor &  2 \\
+Executor Memory & 8GB \\
+Driver Memory & 6GB \\
+Data partitioning & Number of executors $\times$ number of executor cores $\times$ 4 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+To investigate the impact of scaling, we varied only the number of executors, keeping the number of executor 
+cores, driver and executor memory constant across all experiments. This was done because changing both the 
+number of executors and the cores per executor would change several dimensions of parallelism at once, such as 
+task concurrency, scheduling, memory pressure and CPU utilization, introducing multiple mixed effects. By fixing 
+executor cores at 2, we ensured that even at the highest configuration (e.g., 30 executors $\times$ 2 cores = 60 vCPUs on the 8-node cluster), 
+the cluster still had enough CPU capacity to handle YARN and OS processes. Maintaining memory per executor 
+constant as well prevented memory pressure from skewing results. This design controlled for interactions between 
+CPU and memory configurations, allowing us to directly attribute changes in runtime or efficiency to the level of 
+parallelism and the number of executors. This approach provided a clearer understanding of how the system scales 
+with increasing parallelism.
+
+For model performance, we measured validation accuracy, test accuracy, and the effect of varying the number of 
+trees in the Random Forest classifier. For execution analysis, we collected detailed Spark task metrics, 
+including task duration, executor runtime and CPU time, scheduler delay, JVM garbage collection time, records 
+and bytes read, shuffle bytes written/read, number of tasks, peak execution memory, and presence of 
+spills (disk or memory). These metrics allowed us to assess both the quality of the model and the efficiency 
+of the distributed processing. The measurements were collected directly from Spark task-level metrics, 
+obtained through the task metrics API.
+
+The experiments were submitted using \texttt{spark-submit} in both cluster and client deploy modes. Cluster mode 
+runs the Spark driver within the YARN Application Master on the cluster, allowing the client to disconnect while 
+the job continues running, making it preferred for production and long-running tasks. Client mode runs the driver 
+on the client machine, suitable for debugging and interactive use but dependent on client connectivity. Majority 
+of our experiments were done in cluster mode.
+
+% -------------- results ----------------
+\subsection{Results and Discussion}
+
+Figure~\ref{fig:exec_time} illustrates the execution time curves for each sample fraction (1\%, 3\%, or 5\%), with each line representing a different input size and execution time plotted against the number of executors. The figure shows a comparison of how execution time changes as the cluster parallelism increases. The graph shows that larger sample sizes increase execution time due to the need for more data processing.  
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/speedcurve1.png}
+    \caption{Execution time in seconds for number of executors given the different sample sizes.}
+    \label{fig:exec_time}
+\end{figure}
+
+For the smallest sample size (1\%), the execution time decreases initially as the number of executors increases, 
+from 8 to 16 executors. The execution time then increases for 24 and remains constant up to 30 executors before 
+decreasing again at 32 executors. This drop can be explained by cluster differences where the 30-executor 
+experiment was performed on an 8-node cluster, while the others used the 32-node cluster as explained in the 
+experiment setup. Compared to the 32-node cluster, the 8-node cluster had limited resources which may have caused 
+higher overhead.  
+
+In the 3\% sample fraction, execution time decreases from 8 to 16 executors and remains constant until 32 executors. 
+For this sample, all experiments except the 30-executor experiment were done in the 32-node cluster; however, we 
+see that the parallelism is utilized well, and execution time stabilizes.  
+
+With the 5\% sample fraction, execution time generally decreases with more executors, but a sharp increase is 
+observed at 30 executors, again this is due to experiments being run on the smaller 8-node cluster. Experiments 
+on the 32-node cluster show the expected decrease in execution time with increased parallelism.  
+
+In all experiments, the task count grew with both sample fraction and number of executors, as partitions were 
+scaled according to the formula discussed in Section~5.1. Increasing the number of tasks utilizes more of the 
+cluster’s CPU, but having too many tasks, especially on clusters with fewer resources, can result in additional 
+overhead. This effect is most visible in configurations like the 30-executor experiments on the 8-node cluster.  
+
+The trend in execution time we observe in Figure~\ref{fig:exec_time} can be explained by Spark resource management 
+with different configurations. Increasing the number of executors increases parallelism, but up to a point, which 
+initially reduces execution time because more tasks can run in parallel. However, having too many tasks or too 
+many executors for a small cluster can decrease performance due to a high demand of CPU and memory resources 
+leading to increased overhead.  
+
+To measure the scalability of the distributed system and the parallel efficiency, we compute speedup, defined as:  
+
+\[
+\text{Speedup}(n) = \frac{T_{\text{base}}}{T(n)}
+\]
+
+where $T_{\text{base}}$ is the execution time of the baseline executors and $n$ is the number of executors. In our case, the baseline corresponds to using 8 executors, since this was the smallest executor configuration used in the experiments.  
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/speedcurve2.png}
+    \caption{Speedup curves for each sample size.}
+    \label{fig:speedup}
+\end{figure}
+
+Figure~\ref{fig:speedup} shows the speedup curves for each sample size where there is an initial increase in speedup as more executors are added in all the fraction sizes. The flattening or decrease in speedup for intermediate executor counts is seen on the 30-executor experiment for all sample sizes because they were computed on the 8-node cluster which can be due to limited resources as compared to the 32-node cluster. On the other hand, the 32-node cluster experiments and the 8-node cluster experiments with a smaller number of executors maintain a nearly linear speedup curve indicating better parallelism with larger fractions achieving better utilization of cluster resources.  
+
+The execution time and speedup results show the importance of careful selection of executor count, cores per executor, and data partitioning in Spark to achieve efficient distributed processing and good parallel performance. The experiments make clear that Spark’s performance rises or falls based on how well its settings fit the cluster resources. Adding more executors generally speeds up computations, but only if the cluster has enough nodes, memory, and CPU power to support the increased workload. The changes, especially with 30 executors on the smaller 8-node cluster, demonstrate the disadvantages of pushing a cluster beyond its limits. When resources are stretched too thin, scheduling delays, shuffle overhead, and memory issues slow everything down. On the other hand, larger clusters deliver steady performance gains when executor settings match available resources.  
+
+
+% ----------------------------------------------------
+% CHAPTER 6: CHALLENGES
+% ----------------------------------------------------
+\section{Challenges and Solutions}
+During the first sessions, one cluster was shared among all groups, which made the development slower. Because we had to wait for our colleagues’ jobs to be finished given the cluster was only open during specific time slots per week, it was proving difficult to progress. One solution to mitigate this was to submit jobs using cluster deploy mode, in which the driver runs on the master node instead of on the client. This improved runtime when the shared cluster was heavily loaded but also solved the issue of unstable internet connections because jobs continued running even if the client terminal disconnected, and all logs were stored directly on the cluster for later inspection. The other solution was during the last two sessions, each group had their own cluster, so we were able to perform all the runs we needed.
+
+Another challenge faced was memory availability. Because the dataset was huge, we had to perform our training with less than 10\% of the dataset. Because of this constraint, we decided to perform it using 1\%, 3\%, and 5\% of the total amount of training data.
+
+One other challenge was that reading the dataset using \texttt{spark.read.parquet()} into a DataFrame and then sampling led to I/O overhead and longer execution time. To solve this, we instead listed all the Parquet files in the directory and then randomly sampled the desired size, and these sample files are what was read into a DataFrame. This approach improved overall I/O time and reduced memory usage.
+
+
+% ----------------------------------------------------
+% CHAPTER 7: CONCLUSIONS
+% ----------------------------------------------------
+\section{Conclusion}
+Overall, it is possible to say this project accomplished its purposes. A Random Forest model was implemented for land cover classification on the FRACTAL dataset. All the mandatory steps were followed, such as using the S3 storage, AWS EMR, and conducting the process using PySpark.
+
+The code delivered is reproducible and all the process can be run again without issues. Regarding the different fractions of the data used, partitions of 1\%, 3\%, and 5\% of the total dataset were used in the model implementation, testing a different set of executors for each: 8, 16, 24, 30, and 32.
+
+Through the execution time and speedup for each test, it was possible to see the importance of the selection of parameters, exemplified by the number of executors chosen. Different from what could be expected, the number of executors does not change the processing time linearly. The experiments showed that Spark’s performance rises or falls based on how well its settings fit the cluster resources, highlighting the importance of understanding how the cluster parameters work together, so better performance with fewer resources can be achieved.
+
+Besides that, the different versions of the cluster used showed how larger clusters deliver steady performance gains when executor settings match available resources.
+
+As recommendations for future experiments, we suggest training the data with a larger amount of data to see how the parameters work. This is something we wanted to do, but due to time constraints we could not.
+
+\subsection*{AI Disclaimer}
+Artificial intelligence (AI) tools were used to improve the language, grammar, clarity, and structure of this report. However, they were all reviewed and edited by the authors before addition to the final report. All ideas, analyses, and conclusions presented are originally of the authors.
+
+% ----------------------------------------------------
+% REFERENCES
+% ----------------------------------------------------
+\section{References}
+\printbibliography
+%\nocite{*}
+
+
+
+\end{document}
