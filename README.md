@@ -7,13 +7,13 @@ This repository contains two independent projects demonstrating scalable workflo
 ├── project1/
 │   ├── scripts/                # Core ML pipeline (preprocessing, feature engineering, training)
 │   ├── results/                # Outputs (metrics, logs, scalability plots)
-│   ├── report.pdf              # Detailed report describing scaling experiments
+│   ├── report/main.pdf         # Detailed report describing scaling experiments
 │   ├── README.md               # Detailed ML project documentation
 │
 ├── project2/
 │   ├── scripts/                # Core DL pipeline (model architectures, training loops, utils)
 │   ├── results/                # Model checkpoints, logs, performance summaries
-│   ├── report.pdf              # Detailed report describing scaling experiments
+│   ├── report/main.pdf              # Detailed report describing scaling experiments
 │   ├── README.md               # Detailed DL project documentation
 │
 ├── .gitignore
