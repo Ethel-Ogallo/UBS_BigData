@@ -1,19 +1,37 @@
-## Land Cover Classification using Spark - FRACTAL dataset
-### Project Overview
-This repository contains the implementation of a scalable machine learning pipeline for land cover classification using the FRACTAL dataset. The primary goal is to demonstrate the ability to process and train ML models efficiently on a large point cloud datasets using Apache Spark, MLlib, and AWS cloud infrastructure.
+## Scalable Geospatial ML & DL Projects
 
-The project includes end-to-end data preprocessing, feature engineering, model training, evaluation, and scalability experiments.
+This repository contains two independent projects demonstrating scalable workflows for geospatial datasets using Machine Learning and Deep Learning approaches.
 
-### Dataset
-The project uses the FRACTAL dataset, which consists of large-scale LiDAR point clouds in parquet format. More information about the datset can be found here: [Official Dataset Repository](https://huggingface.co/datasets/IGNF/FRACTAL)  
+```
+.
+├── project1/
+│   ├── scripts/                # Core ML pipeline (preprocessing, feature engineering, training)
+│   ├── results/                # Outputs (metrics, logs, scalability plots)
+│   ├── report.pdf              # Detailed report describing scaling experiments
+│   ├── README.md               # Detailed ML project documentation
+│
+├── project2/
+│   ├── scripts/                # Core DL pipeline (model architectures, training loops, utils)
+│   ├── results/                # Model checkpoints, logs, performance summaries
+│   ├── report.pdf              # Detailed report describing scaling experiments
+│   ├── README.md               # Detailed DL project documentation
+│
+├── .gitignore
+└── README.md               
+```
 
-### Project Workflow
-1. Data preprocessing
-- Handle missing, duplicate, outliers values
-- EDA
-- Feature engineering
-3. Machine Learning
-- Train ML model
-- Evaluate the model
-4. Scalability Experiments
-- Evaluate speedup curves for dataset fractions 1%,3% and 5% on *n* executors.
+### Project Summaries
+**1. Scalable Machine Learning**  
+Distributed ML workflow for large geospatial datasets, with Spark-based preprocessing, feature engineering, training, and scalability experiments.  
+Full details in: project1/README.md  
+
+**2. Scalable Deep Learning**  
+Scalable deep learning pipeline designed for GPU and multi-GPU training on large imagery datasets.  
+Full details in: project2/README.md    
+
+### Purpose  
+This repository provides a unified place to compare scalable techniques across ML and DL, focusing on:  
+- Differences in preprocessing approaches
+- CPU-based vs. GPU-based scaling
+- Distributed execution strategies
+- Performance and scalability trade-offs
